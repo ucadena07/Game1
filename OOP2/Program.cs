@@ -1,9 +1,8 @@
 ﻿using System;
+using OOP2;
 
-namespace OOP2
+class Program
 {
-    class Program
-    {
         static void Main(string[] args)
         {
             Warrior goodGuy = new Warrior(10, 100, "Bob");
@@ -16,5 +15,5 @@ namespace OOP2
             badGuy.Attack(goodGuy);
 
         }
-    }
 }
+
