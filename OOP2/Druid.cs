@@ -23,6 +23,11 @@ namespace OOP2
         public LeatherVest BodyArmor { get; set; }
         public Staff Weapon { get; set; }
 
+        public Druid()
+        {
+
+        }
+
         public void MoonFire()
         {
 

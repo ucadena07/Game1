@@ -6,17 +6,10 @@ namespace OOP2
     {
         static void Main(string[] args)
         {
-            Warrior goodGuy = new Warrior();
-            Warrior badGuy = new Warrior();
+            Warrior goodGuy = new Warrior(10, 100, "Bob");
+            Warrior badGuy = new Warrior(11, 70, "John");
 
-            goodGuy.Name = "Bob";
-            goodGuy.Damage = 10;
-            goodGuy.HealthPoints = 100;
-
-
-            badGuy.Name = "John";
-            badGuy.Damage = 11;
-            badGuy.HealthPoints = 70;
+            
 
             //goodGuy.Greeting(badGuy.Name);
             goodGuy.Attack(badGuy);

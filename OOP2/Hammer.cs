@@ -7,6 +7,11 @@ namespace OOP2
 
         public int  Damage { get; set; }
 
+        public Hammer()
+        {
+
+        }
+
         public void Stun()
         {
 

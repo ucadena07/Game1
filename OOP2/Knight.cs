@@ -23,6 +23,11 @@ namespace OOP2
         public Chainlink BodyArmor { get; set; }
         public Hammer Weapon { get; set; }
 
+        public Knight()
+        {
+
+        }
+
         public void HolyBlow()
         {
 

@@ -7,6 +7,10 @@ namespace OOP2
 
         public int Damage { get; set; }
 
+        public Staff()
+        {
+
+        }
         public void Empower()
         {
 

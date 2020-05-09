@@ -23,6 +23,11 @@ namespace OOP2
         public ClothRobe BodyArmor { get; set; }
         public Staff Weapon { get; set; }
 
+        public Mage()
+        {
+
+        }
+
         public void ArcaneWrath()
         {
 

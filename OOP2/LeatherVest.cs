@@ -6,5 +6,10 @@ namespace OOP2
         private int armorPoints;
 
         public int ArmorPoints { get; set; }
+
+        public LeatherVest()
+        {
+
+        }
     }
 }

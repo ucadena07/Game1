@@ -25,6 +25,13 @@ namespace OOP2
         public Chainlink BodyArmor { get; set; }
         public Axe Weapon { get; set; }
 
+        public Warrior(int damage, int healthPoints, string name)
+        {
+            Damage = damage;
+            HealthPoints = healthPoints;
+            Name = name;
+        }
+
         public void Greeting(string name)
         {
             Console.WriteLine($"{Name} greets {name}");
