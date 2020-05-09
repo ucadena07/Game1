@@ -22,5 +22,20 @@ namespace OOP2
 
         public LeatherVest BodyArmor { get; set; }
         public Staff Weapon { get; set; }
+
+        public void MoonFire()
+        {
+
+        }
+
+        public void Starburst()
+        {
+
+        }
+
+        public void OneWithTheNature()
+        {
+
+        }
     }
 }

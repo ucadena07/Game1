@@ -22,5 +22,20 @@ namespace OOP2
 
         public ClothRobe BodyArmor { get; set; }
         public Staff Weapon { get; set; }
+
+        public void ArcaneWrath()
+        {
+
+        }
+
+        public void FireWall()
+        {
+
+        }
+
+        public void Meditation()
+        {
+
+        }
     }
 }

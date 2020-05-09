@@ -22,5 +22,20 @@ namespace OOP2
 
         public LeatherVest BodyArmor { get; set; }
         public Sword Weapon { get; set; }
+
+        public void Raze()
+        {
+
+        }
+
+        public void Bleed()
+        {
+
+        }
+
+        public  void Survival()
+        {
+
+        }
     }
 }

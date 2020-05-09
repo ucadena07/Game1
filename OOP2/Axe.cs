@@ -7,5 +7,10 @@ namespace OOP2
         private int damage;
 
         public int Damage { get; set; }
+
+        public void HackSlash()
+        {
+
+        }
     }
 }

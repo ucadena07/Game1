@@ -23,5 +23,19 @@ namespace OOP2
         public LeatherVest BodyArmor { get; set; }
         public Sword Weapon { get; set; }
 
+        public void ShadowRage()
+        {
+
+        }
+
+        public void VampireTouch()
+        {
+
+        }
+
+        public void BoneShield()
+        {
+
+        }
     }
 }
