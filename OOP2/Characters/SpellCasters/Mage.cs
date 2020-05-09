@@ -13,15 +13,86 @@ namespace OOP2
         private ClothRobe bodyArmor;
         private Staff weapon;
 
-        public int AbilityPoints { get; set; }
-        public int HealthPoints { get; set; }
-        public int Level { get; set; }
+        public int AbilityPoints
+        {
+            get
+            {
+                return abilityPoints;
+            }
+            set
+            {
+                abilityPoints = value;
+            }
+        }
 
-        public string Name { get; set; }
-        public string Faction { get; set; }
+        public int HealthPoints
+        {
+            get
+            {
+                return healthPoints;
+            }
+            set
+            {
+                healthPoints = value;
+            }
+        }
+        public int Level
+        {
+            get
+            {
+                return level;
+            }
+            set
+            {
+                level = value;
+            }
+        }
 
-        public ClothRobe BodyArmor { get; set; }
-        public Staff Weapon { get; set; }
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+        }
+        public string Faction
+        {
+            get
+            {
+                return faction;
+            }
+            set
+            {
+                faction = value;
+            }
+        }
+
+        public ClothRobe BodyArmor
+        {
+            get
+            {
+                return bodyArmor;
+            }
+            set
+            {
+                bodyArmor = value;
+            }
+        }
+        public Staff Weapon
+        {
+            get
+            {
+                return weapon;
+            }
+            set
+            {
+                weapon = value;
+            }
+        }
 
         public Mage()
         {

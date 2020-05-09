@@ -14,16 +14,99 @@ namespace OOP2
         private Chainlink bodyArmor;
         private Axe weapon;
 
-        public int AbilityPoints { get; set; }
-        public int HealthPoints { get; set; }
-        public int Level { get; set; }
-        public int Damage { get; set; }
+        public int AbilityPoints
+        {
+            get
+            {
+                return abilityPoints;
+            }
+            set
+            {
+                abilityPoints = value;
+            }
+        }
 
-        public string Name { get; set; }
-        public string Faction { get; set; }
+        public int HealthPoints
+        {
+            get
+            {
+                return healthPoints;
+            }
+            set
+            {
+                healthPoints = value;
+            }
+        }
 
-        public Chainlink BodyArmor { get; set; }
-        public Axe Weapon { get; set; }
+        public int Level
+        {
+            get
+            {
+                return level;
+            }
+            set
+            {
+                level = value;
+            }
+        }
+
+        public int Damage
+        {
+            get
+            {
+                return damage;
+            }
+            set
+            {
+                damage = value;
+            }
+        }
+
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+        }
+        public string Faction
+        {
+            get
+            {
+                return faction;
+            }
+            set
+            {
+                faction = value;
+            }
+        }
+
+        public Chainlink BodyArmor
+        {
+            get
+            {
+                return bodyArmor;
+            }
+            set
+            {
+                bodyArmor = value;
+            }
+        }
+        public Axe Weapon
+        {
+            get
+            {
+                return weapon;
+            }
+            set
+            {
+                weapon = value;
+            }
+        }
 
         public Warrior(int damage, int healthPoints, string name)
         {
