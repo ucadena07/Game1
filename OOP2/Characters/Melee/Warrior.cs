@@ -6,7 +6,7 @@ namespace OOP2
         private int abilityPoints;
         private int healthPoints;
         private int level;
-        private int damage;
+        
 
         private string name;
         private string faction;
@@ -22,7 +22,14 @@ namespace OOP2
             }
             set
             {
-                abilityPoints = value;
+                if (value >= 0 && value <= 10)
+                {
+                    AbilityPoints = value;
+                }
+                else
+                {
+                    Console.WriteLine("Please enter a number in the range of 0 to 10");
+                }
             }
         }
 
@@ -34,7 +41,14 @@ namespace OOP2
             }
             set
             {
-                healthPoints = value;
+                if (value >= 0 && value <= 100)
+                {
+                    HealthPoints = value;
+                }
+                else
+                {
+                    Console.WriteLine("Please enter a number in the range of 0 to 100");
+                }
             }
         }
 
@@ -46,21 +60,17 @@ namespace OOP2
             }
             set
             {
-                level = value;
+                if (value > 0 && value <= 100)
+                {
+                    Level = value;
+                }
+                else
+                {
+                    Console.WriteLine("Please enter a number in the range of 1 - 100");
+                }
             }
         }
 
-        public int Damage
-        {
-            get
-            {
-                return damage;
-            }
-            set
-            {
-                damage = value;
-            }
-        }
 
         public string Name
         {
@@ -70,7 +80,14 @@ namespace OOP2
             }
             set
             {
-                name = value;
+                if(value.Length >= 2 && value.Length <= 10)
+                {
+                    name = value;
+                }
+                else
+                {
+                    Console.WriteLine("Name must be 2 to 10 characters long.");
+                }
             }
         }
         public string Faction
@@ -81,7 +98,14 @@ namespace OOP2
             }
             set
             {
-                faction = value;
+                if (value == "Melee" || value == "Spellcaster")
+                {
+                    faction = value;
+                }
+                else
+                {
+                    Console.WriteLine("Inappropriate faction! should be \"Melee\" or \"Spellcaster\"");
+                }
             }
         }
 
@@ -106,24 +130,6 @@ namespace OOP2
             {
                 weapon = value;
             }
-        }
-
-        public Warrior(int damage, int healthPoints, string name)
-        {
-            Damage = damage;
-            HealthPoints = healthPoints;
-            Name = name;
-        }
-
-        public void Greeting(string name)
-        {
-            Console.WriteLine($"{Name} greets {name}");
-        }
-
-        public void Attack(Warrior enemy)
-        {
-            enemy.HealthPoints -= Damage;
-            Console.WriteLine($"{Name} is attacking {enemy.Name}. {enemy.Name} now has {enemy.HealthPoints} remaining ");
         }
 
         public void Strike()

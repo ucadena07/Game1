@@ -13,7 +13,14 @@ namespace OOP2
             }
             set
             {
-                damage = value;
+                if (value > 1 && value <= 10)
+                {
+                    damage = value;
+                }
+                else
+                {
+                    Console.WriteLine("Please enter a number in the range of ( 1 - 10 )");
+                }
             }
         }
 

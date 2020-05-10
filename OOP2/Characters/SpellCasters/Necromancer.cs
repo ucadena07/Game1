@@ -21,7 +21,14 @@ namespace OOP2
             }
             set
             {
-                abilityPoints = value;
+                if (value >= 0 && value <= 10)
+                {
+                    abilityPoints = value;
+                }
+                else
+                {
+                    Console.WriteLine("Please enter a number in the range of 0 to 10");
+                }
             }
         }
 
@@ -33,7 +40,14 @@ namespace OOP2
             }
             set
             {
-                healthPoints = value;
+                if (value >= 0 && value <= 100)
+                {
+                    healthPoints = value;
+                }
+                else
+                {
+                    Console.WriteLine("Please enter a number in the range of 0 to 100");
+                }
             }
         }
         public int Level
@@ -44,7 +58,14 @@ namespace OOP2
             }
             set
             {
-                level = value;
+                if (value > 0 && value <= 100)
+                {
+                    level = value;
+                }
+                else
+                {
+                    Console.WriteLine("Please enter a number in the range of 1 - 100");
+                }
             }
         }
 
@@ -56,7 +77,14 @@ namespace OOP2
             }
             set
             {
-                name = value;
+                if (value.Length >= 2 && value.Length <= 10)
+                {
+                    name = value;
+                }
+                else
+                {
+                    Console.WriteLine("Name must be 2 to 10 characters long.");
+                }
             }
         }
         public string Faction
@@ -67,7 +95,15 @@ namespace OOP2
             }
             set
             {
-                faction = value;
+                if (value == "Melee" || value == "Spellcaster")
+                {
+                    faction = value;
+                }
+                else
+                {
+                    Console.WriteLine("Inappropriate faction! should be \"Melee\" or \"Spellcaster\"");
+                }
+
             }
         }
 

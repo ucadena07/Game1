@@ -13,7 +13,14 @@ namespace OOP2
             }
             set
             {
-                armorPoints = value;
+                if (value > 0 && value <= 100)
+                {
+                    armorPoints = value;
+                }
+                else
+                {
+                    Console.WriteLine("Plese enter a number in the range of 1 to 10");
+                }
             }
         }
 
