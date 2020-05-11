@@ -135,13 +135,34 @@ namespace OOP2
             }
         }
 
-        public Necromancer(string name, int level, int healthPoints)
+        public Necromancer()
+        {
+            this.Name = "Voldo";
+            this.Level = 1;
+            this.HealthPoints = 100;
+            this.Faction = "Spellcaster";
+            this.AbilityPoints = 10;
+            this.BodyArmor = new LeatherVest();
+            this.Weapon = new Sword();
+        }
+
+        public Necromancer(string name, int level)
         {
             this.Name = name;
             this.Level = level;
-            this.HealthPoints = healthPoints;
-            this.Faction = "Melee";
+            this.HealthPoints = 100;
+            this.Faction = "Spellcaster";
             this.AbilityPoints = 10;
+            this.BodyArmor = new LeatherVest();
+            this.Weapon = new Sword();
+        }
+        public Necromancer(string name, int level, int abilityPoints)
+        {
+            this.Name = name;
+            this.Level = level;
+            this.HealthPoints = 100;
+            this.Faction = "Spellcaster";
+            this.AbilityPoints = abilityPoints;
             this.BodyArmor = new LeatherVest();
             this.Weapon = new Sword();
         }

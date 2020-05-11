@@ -133,13 +133,33 @@ namespace OOP2
             }
         }
 
-        public Druid(string name, int level, int healthPoints)
+        public Druid()
+        {
+            this.Name = "Henry";
+            this.Level = 1;
+            this.HealthPoints = 100;
+            this.Faction = "Spellcaster";
+            this.AbilityPoints = 10;
+            this.BodyArmor = new LeatherVest();
+            this.Weapon = new Staff();
+        }
+        public Druid(string name, int level)
         {
             this.Name = name;
             this.Level = level;
-            this.HealthPoints = healthPoints;
-            this.Faction = "Melee";
+            this.HealthPoints = 100;
+            this.Faction = "Spellcaster";
             this.AbilityPoints = 10;
+            this.BodyArmor = new LeatherVest();
+            this.Weapon = new Staff();
+        }
+        public Druid(string name, int level, int abilityPoints)
+        {
+            this.Name = name;
+            this.Level = level;
+            this.HealthPoints = 100;
+            this.Faction = "Spellcaster";
+            this.AbilityPoints = abilityPoints;
             this.BodyArmor = new LeatherVest();
             this.Weapon = new Staff();
         }

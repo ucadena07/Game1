@@ -82,7 +82,7 @@ namespace OOP2
             {
                 if (value.Length >= 2 && value.Length <= 10)
                 {
-                   this.name = value;
+                    this.name = value;
                 }
                 else
                 {
@@ -133,13 +133,34 @@ namespace OOP2
             }
         }
 
-        public Mage(string name, int level, int healthPoints)
+        public Mage()
+        {
+            this.Name = "Vivi";
+            this.Level = 1;
+            this.HealthPoints = 100;
+            this.Faction = "Spellcaster";
+            this.AbilityPoints = 10;
+            this.BodyArmor = new ClothRobe();
+            this.Weapon = new Staff();
+        }
+
+        public Mage(string name, int level)
         {
             this.Name = name;
             this.Level = level;
-            this.HealthPoints = healthPoints;
-            this.Faction = "Melee";
+            this.HealthPoints = 100;
+            this.Faction = "Spellcaster";
             this.AbilityPoints = 10;
+            this.BodyArmor = new ClothRobe();
+            this.Weapon = new Staff();
+        }
+        public Mage(string name, int level, int abilityPoints)
+        {
+            this.Name = name;
+            this.Level = level;
+            this.HealthPoints = 100;
+            this.Faction = "Spellcaster";
+            this.AbilityPoints = abilityPoints;
             this.BodyArmor = new ClothRobe();
             this.Weapon = new Staff();
         }
