@@ -121,6 +121,7 @@ namespace OOP2
                 this.bodyArmor = value;
             }
         }
+
         public Sword Weapon
         {
             get
@@ -133,9 +134,15 @@ namespace OOP2
             }
         }
 
-        public Assassin()
+        public Assassin(string name, int level, int healthPoints)
         {
-
+            this.Name = name;
+            this.Level = level;
+            this.HealthPoints = healthPoints;
+            this.Faction = "Melee";
+            this.AbilityPoints = 10;
+            this.BodyArmor = new LeatherVest();
+            this.Weapon = new Sword();
         }
 
         public void Raze()

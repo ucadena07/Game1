@@ -135,9 +135,15 @@ namespace OOP2
             }
         }
 
-        public Necromancer()
+        public Necromancer(string name, int level, int healthPoints)
         {
-
+            this.Name = name;
+            this.Level = level;
+            this.HealthPoints = healthPoints;
+            this.Faction = "Melee";
+            this.AbilityPoints = 10;
+            this.BodyArmor = new LeatherVest();
+            this.Weapon = new Sword();
         }
 
         public void ShadowRage()

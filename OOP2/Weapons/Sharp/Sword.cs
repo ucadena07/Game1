@@ -9,7 +9,7 @@ namespace OOP2
         {
             get
             {
-                return damage;
+                return this.damage;
             }
             set
             {
@@ -19,7 +19,7 @@ namespace OOP2
                 }
                 else
                 {
-                    this.damage = 0;
+                    this.damage = 1;
                     Console.WriteLine("Please enter a number in the range of ( 1 - 10 )");
                 }
             }
@@ -27,7 +27,7 @@ namespace OOP2
 
         public Sword()
         {
-
+            this.Damage = 10;
         }
 
         public void BloodThirst()

@@ -28,7 +28,7 @@ namespace OOP2
 
         public Axe()
         {
-
+            this.Damage = 10;
         }
 
         public void HackSlash()

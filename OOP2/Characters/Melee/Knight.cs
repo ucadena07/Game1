@@ -133,9 +133,15 @@ namespace OOP2
             }
         }
 
-        public Knight()
+        public Knight(string name, int level, int healthPoints)
         {
-
+            this.Name = name;
+            this.Level = level;
+            this.HealthPoints = healthPoints;
+            this.Faction = "Melee";
+            this.AbilityPoints = 10;
+            this.BodyArmor = new Chainlink();
+            this.Weapon = new Hammer();
         }
 
         public void HolyBlow()

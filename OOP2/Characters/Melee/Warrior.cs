@@ -129,17 +129,24 @@ namespace OOP2
         {
             get
             {
-                return weapon;
+                return this.weapon;
             }
             set
             {
-                weapon = value;
+                this.weapon = value;
             }
         }
 
-        public Warrior(string name)
+        public Warrior(string name, int level, int healthPoints)
         {
-            
+            this.Name = name;
+            this.Level = level;
+            this.HealthPoints = healthPoints;
+            this.Faction = "Melee";
+            this.AbilityPoints = 10;
+            this.BodyArmor = new Chainlink();
+            this.Weapon = new Axe();
+
         }
 
         public void Strike()
