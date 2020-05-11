@@ -17,17 +17,17 @@ namespace OOP2
         {
             get
             {
-                return abilityPoints;
+                return this.abilityPoints;
             }
             set
             {
                 if (value >= 0 && value <= 10)
                 {
-                    abilityPoints = value;
+                    this.abilityPoints = value;
                 }
                 else
                 {
-                    abilityPoints = 0;
+                    this.abilityPoints = 0;
                     Console.WriteLine("Please enter a number in the range of 0 to 10");
                 }
             }
@@ -37,17 +37,17 @@ namespace OOP2
         {
             get
             {
-                return healthPoints;
+                return this.healthPoints;
             }
             set
             {
                 if (value >= 0 && value <= 100)
                 {
-                    healthPoints = value;
+                    this.healthPoints = value;
                 }
                 else
                 {
-                    healthPoints = 0;
+                    this.healthPoints = 0;
                     Console.WriteLine("Please enter a number in the range of 0 to 100");
                 }
             }
@@ -56,17 +56,17 @@ namespace OOP2
         {
             get
             {
-                return level;
+                return this.level;
             }
             set
             {
                 if (value > 0 && value <= 100)
                 {
-                    level = value;
+                    this.level = value;
                 }
                 else
                 {
-                    level = 1;
+                    this.level = 1;
                     Console.WriteLine("Please enter a number in the range of 1 - 100");
                 }
             }
@@ -76,13 +76,13 @@ namespace OOP2
         {
             get
             {
-                return name;
+                return this.name;
             }
             set
             {
                 if (value.Length >= 2 && value.Length <= 10)
                 {
-                    name = value;
+                    this.name = value;
                 }
                 else
                 {
@@ -94,17 +94,17 @@ namespace OOP2
         {
             get
             {
-                return faction;
+                return this.faction;
             }
             set
             {
                 if (value == "Melee" || value == "Spellcaster")
                 {
-                    faction = value;
+                    this.faction = value;
                 }
                 else
                 {
-                    faction = "Melee";
+                    this.faction = "Melee";
                     Console.WriteLine("Inappropriate faction! should be \"Melee\" or \"Spellcaster\"");
                 }
             }
@@ -114,21 +114,22 @@ namespace OOP2
         {
             get
             {
-                return bodyArmor;
+                return this.bodyArmor;
             }
             set
             {
-                bodyArmor = value;
+                this.bodyArmor = value;
             }
         }
         public Sword Weapon
         {
             get
-            { return weapon;
+            {
+                return this.weapon;
             }
             set
             {
-                weapon = value;
+                this.weapon = value;
             }
         }
 

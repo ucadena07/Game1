@@ -15,11 +15,11 @@ namespace OOP2
             {
                 if (value > 1 && value <= 10)
                 {
-                    damage = value;
+                    this.damage = value;
                 }
                 else
                 {
-                    damage = 0;
+                    this.damage = 0;
                     Console.WriteLine("Please enter a number in the range of ( 1 - 10 )");
                 }
             }

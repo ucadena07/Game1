@@ -15,11 +15,11 @@ namespace OOP2
             {
                 if (value > 0 && value <= 100)
                 {
-                    armorPoints = value;
+                    this.armorPoints = value;
                 }
                 else
                 {
-                    armorPoints = 0;
+                    this.armorPoints = 0;
                     Console.WriteLine("Plese enter a number in the range of 1 to 10");
                 }
             }

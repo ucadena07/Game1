@@ -18,17 +18,17 @@ namespace OOP2
         {
             get
             {
-                return abilityPoints;
+                return this.abilityPoints;
             }
             set
             {
                 if (value >= 0 && value <= 10)
                 {
-                    AbilityPoints = value;
+                    this.AbilityPoints = value;
                 }
                 else
                 {
-                    abilityPoints = 0;
+                    this.abilityPoints = 0;
                     Console.WriteLine("Please enter a number in the range of 0 to 10");
                 }
             }
@@ -38,17 +38,17 @@ namespace OOP2
         {
             get
             {
-                return healthPoints;
+                return this.healthPoints;
             }
             set
             {
                 if (value >= 0 && value <= 100)
                 {
-                    HealthPoints = value;
+                    this.healthPoints = value;
                 }
                 else
                 {
-                    healthPoints = 0;
+                    this.healthPoints = 0;
                     Console.WriteLine("Please enter a number in the range of 0 to 100");
                 }
             }
@@ -58,13 +58,13 @@ namespace OOP2
         {
             get
             {
-                return level;
+                return this.level;
             }
             set
             {
                 if (value > 0 && value <= 100)
                 {
-                    Level = value;
+                    this.Level = value;
                 }
                 else
                 {
@@ -98,17 +98,17 @@ namespace OOP2
         {
             get
             {
-                return faction;
+                return this.faction;
             }
             set
             {
                 if (value == "Melee" || value == "Spellcaster")
                 {
-                    faction = value;
+                    this.faction = value;
                 }
                 else
                 {
-                    faction = "Melee";
+                    this.faction = "Melee";
                     Console.WriteLine("Inappropriate faction! should be \"Melee\" or \"Spellcaster\"");
                 }
             }
@@ -135,6 +135,11 @@ namespace OOP2
             {
                 weapon = value;
             }
+        }
+
+        public Warrior(string name)
+        {
+            
         }
 
         public void Strike()
