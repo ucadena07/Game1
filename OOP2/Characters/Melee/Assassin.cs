@@ -135,24 +135,15 @@ namespace OOP2
         }
 
         public Assassin()
+            : this("Jade", 1)
         {
-            this.Name = "Jade";
-            this.Level = 1;
-            this.HealthPoints = 100;
-            this.Faction = "Melee";
-            this.AbilityPoints = 10;
-            this.BodyArmor = new LeatherVest();
-            this.Weapon = new Sword();
+           
         }
 
         public Assassin(string name, int level)
+            : this(name, level, 10)
         {
-            this.Name = name;
-            this.Level = level;
-            this.HealthPoints = 100;
-            this.AbilityPoints = 10;
-            this.BodyArmor = new LeatherVest();
-            this.Weapon = new Sword();
+           
         }
         public Assassin(string name, int level, int abilityPoints)
         {

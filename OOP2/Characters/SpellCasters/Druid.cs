@@ -134,24 +134,14 @@ namespace OOP2
         }
 
         public Druid()
+            : this("Henry", 1)
         {
-            this.Name = "Henry";
-            this.Level = 1;
-            this.HealthPoints = 100;
-            this.Faction = "Spellcaster";
-            this.AbilityPoints = 10;
-            this.BodyArmor = new LeatherVest();
-            this.Weapon = new Staff();
+            
         }
         public Druid(string name, int level)
+            : this(name, level, 10)
         {
-            this.Name = name;
-            this.Level = level;
-            this.HealthPoints = 100;
-            this.Faction = "Spellcaster";
-            this.AbilityPoints = 10;
-            this.BodyArmor = new LeatherVest();
-            this.Weapon = new Staff();
+        
         }
         public Druid(string name, int level, int abilityPoints)
         {

@@ -134,25 +134,15 @@ namespace OOP2
         }
 
         public Mage()
+            : this("Vivi", 1)
         {
-            this.Name = "Vivi";
-            this.Level = 1;
-            this.HealthPoints = 100;
-            this.Faction = "Spellcaster";
-            this.AbilityPoints = 10;
-            this.BodyArmor = new ClothRobe();
-            this.Weapon = new Staff();
+           
         }
 
         public Mage(string name, int level)
+            : this(name, level, 10)
         {
-            this.Name = name;
-            this.Level = level;
-            this.HealthPoints = 100;
-            this.Faction = "Spellcaster";
-            this.AbilityPoints = 10;
-            this.BodyArmor = new ClothRobe();
-            this.Weapon = new Staff();
+          
         }
         public Mage(string name, int level, int abilityPoints)
         {

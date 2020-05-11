@@ -134,25 +134,14 @@ namespace OOP2
         }
 
         public Knight()
+            : this("Robert", 1)
         {
-            this.Name = "Robert";
-            this.Level = 1;
-            this.HealthPoints = 100;
-            this.Faction = "Melee";
-            this.AbilityPoints = 10;
-            this.BodyArmor = new Chainlink();
-            this.Weapon = new Hammer();
-        }
+        }  
 
         public Knight(string name, int level)
+            : this(name,level, 10)
         {
-            this.Name = name;
-            this.Level = level;
-            this.HealthPoints = 100;
-            this.Faction = "Melee";
-            this.AbilityPoints = 10;
-            this.BodyArmor = new Chainlink();
-            this.Weapon = new Hammer();
+            
         }
 
         public Knight(string name, int level, int abilityPoints)
