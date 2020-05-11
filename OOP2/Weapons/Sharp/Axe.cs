@@ -20,6 +20,7 @@ namespace OOP2
                 }
                 else
                 {
+                    damage = 0;
                     Console.WriteLine("Please enter a number in the range of ( 1 - 10 )");
                 }
             }
@@ -32,7 +33,7 @@ namespace OOP2
 
         public void HackSlash()
         {
-
+            throw new NotImplementedException();
         }
     }
 }

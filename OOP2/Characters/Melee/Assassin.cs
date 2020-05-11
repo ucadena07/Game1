@@ -27,6 +27,7 @@ namespace OOP2
                 }
                 else
                 {
+                    abilityPoints = 0;
                     Console.WriteLine("Please enter a number in the range of 0 to 10");
                 }
             }
@@ -46,6 +47,7 @@ namespace OOP2
                 }
                 else
                 {
+                    healthPoints = 0;
                     Console.WriteLine("Please enter a number in the range of 0 to 100");
                 }
             }
@@ -64,6 +66,7 @@ namespace OOP2
                 }
                 else
                 {
+                    level = 1;
                     Console.WriteLine("Please enter a number in the range of 1 - 100");
                 }
             }
@@ -101,6 +104,7 @@ namespace OOP2
                 }
                 else
                 {
+                    faction = "Melee";
                     Console.WriteLine("Inappropriate faction! should be \"Melee\" or \"Spellcaster\"");
                 }
             }
@@ -135,17 +139,17 @@ namespace OOP2
 
         public void Raze()
         {
-
+            throw new NotImplementedException();
         }
 
         public void Bleed()
         {
-
+            throw new NotImplementedException();
         }
 
         public  void Survival()
         {
-
+            throw new NotImplementedException();
         }
     }
 }

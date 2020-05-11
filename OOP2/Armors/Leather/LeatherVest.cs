@@ -19,6 +19,7 @@ namespace OOP2
                 }
                 else
                 {
+                    armorPoints = 0;
                     Console.WriteLine("Plese enter a number in the range of 1 to 10");
                 }
             }
