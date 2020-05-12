@@ -3,6 +3,17 @@ namespace OOP2
 {
     public class Warrior
     {
+        private const string DEFAULT_NAME = "Warrior";
+        private const string DEFAULT_FACTION = "Melee";
+
+        private const int DEFAULT_LEVEL = 1;
+        private const int DEFAULT_ABILITY_POINTS = 10;
+        private const int DEFAULT_HEALTH_POINTS = 100;
+
+        private readonly Axe DEFAULT_WEAPON = new Axe();
+        private readonly Chainlink DEFAULT_BODY_ARMOR = new Chainlink();
+
+
         private int abilityPoints;
         private int healthPoints;
         private int level;
@@ -14,6 +25,16 @@ namespace OOP2
         private Chainlink bodyArmor;
         private Axe weapon;
 
+        public int Id
+        {
+            get
+            {
+                return this.id;
+            }
+           
+        }
+
+
         public int AbilityPoints
         {
             get
@@ -24,7 +45,7 @@ namespace OOP2
             {
                 if (value >= 0 && value <= 10)
                 {
-                    this.AbilityPoints = value;
+                    this.abilityPoints = value;
                 }
                 else
                 {
@@ -64,7 +85,7 @@ namespace OOP2
             {
                 if (value > 0 && value <= 100)
                 {
-                    this.Level = value;
+                    this.level = value;
                 }
                 else
                 {
@@ -80,13 +101,13 @@ namespace OOP2
         {
             get
             {
-                return name;
+                return this.name;
             }
             set
             {
                 if(value.Length >= 2 && value.Length <= 10)
                 {
-                    name = value;
+                    this.name = value;
                 }
                 else
                 {
@@ -118,11 +139,11 @@ namespace OOP2
         {
             get
             {
-                return bodyArmor;
+                return this.bodyArmor;
             }
             set
             {
-                bodyArmor = value;
+                this.bodyArmor = value;
             }
         }
         public Axe Weapon
@@ -138,26 +159,27 @@ namespace OOP2
         }
 
         public Warrior()
-            : this("Bob", 1)
+            : this(DEFAULT_NAME, DEFAULT_LEVEL)
         {
             
         }
 
         public Warrior(string name, int level)
-            : this(name, level, 10)
+            : this(name, level, DEFAULT_ABILITY_POINTS)
         {
             
         }
 
         public Warrior(string name, int level, int abilityPoints)
         {
+   
             this.Name = name;
             this.Level = level;
-            this.HealthPoints = healthPoints;
-            this.Faction = "Melee";
+            this.HealthPoints = DEFAULT_HEALTH_POINTS;
+            this.Faction = DEFAULT_FACTION;
             this.AbilityPoints = abilityPoints;
-            this.BodyArmor = new Chainlink();
-            this.Weapon = new Axe();
+            this.BodyArmor = DEFAULT_BODY_ARMOR;
+            this.Weapon = DEFAULT_WEAPON;
         }
 
         public void Strike()

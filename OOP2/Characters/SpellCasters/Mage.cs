@@ -3,6 +3,16 @@ namespace OOP2
 {
     public class Mage
     {
+        private const string DEFAULT_NAME = "Mage";
+        private const string DEFAULT_FACTION = "Spellcaster";
+
+        private const int DEFAULT_LEVEL = 1;
+        private const int DEFAULT_ABILITY_POINTS = 10;
+        private const int DEFAULT_HEALTH_POINTS = 100;
+
+        private readonly Staff DEFAULT_WEAPON = new Staff();
+        private readonly ClothRobe DEFAULT_BODY_ARMOR = new ClothRobe();
+
         private int abilityPoints;
         private int healthPoints;
         private int level;
@@ -134,13 +144,13 @@ namespace OOP2
         }
 
         public Mage()
-            : this("Vivi", 1)
+            : this(DEFAULT_NAME, DEFAULT_LEVEL)
         {
            
         }
 
         public Mage(string name, int level)
-            : this(name, level, 10)
+            : this(name, level, DEFAULT_ABILITY_POINTS)
         {
           
         }
@@ -148,11 +158,11 @@ namespace OOP2
         {
             this.Name = name;
             this.Level = level;
-            this.HealthPoints = 100;
-            this.Faction = "Spellcaster";
+            this.HealthPoints = DEFAULT_HEALTH_POINTS;
+            this.Faction = DEFAULT_FACTION;
             this.AbilityPoints = abilityPoints;
-            this.BodyArmor = new ClothRobe();
-            this.Weapon = new Staff();
+            this.BodyArmor = DEFAULT_BODY_ARMOR;
+            this.Weapon = DEFAULT_WEAPON;
         }
 
         public void ArcaneWrath()

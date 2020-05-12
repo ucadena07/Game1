@@ -3,6 +3,16 @@ namespace OOP2
 {
     public class Necromancer
     {
+        private const string DEFAULT_NAME = "Necromancer";
+        private const string DEFAULT_FACTION = "Spellcaster";
+
+        private const int DEFAULT_LEVEL = 1;
+        private const int DEFAULT_ABILITY_POINTS = 10;
+        private const int DEFAULT_HEALTH_POINTS = 100;
+
+        private readonly Sword DEFAULT_WEAPON = new Sword();
+        private readonly LeatherVest DEFAULT_BODY_ARMOR = new LeatherVest();
+
         private int abilityPoints;
         private int healthPoints;
         private int level;
@@ -136,13 +146,13 @@ namespace OOP2
         }
 
         public Necromancer()
-            : this("Voldo", 1)
+            : this(DEFAULT_NAME, DEFAULT_LEVEL)
         {
            
         }
 
         public Necromancer(string name, int level)
-            : this(name, level, 10)
+            : this(name, level, DEFAULT_ABILITY_POINTS)
         {
             
         }
@@ -150,11 +160,11 @@ namespace OOP2
         {
             this.Name = name;
             this.Level = level;
-            this.HealthPoints = 100;
-            this.Faction = "Spellcaster";
+            this.HealthPoints = DEFAULT_HEALTH_POINTS;
+            this.Faction = DEFAULT_FACTION;
             this.AbilityPoints = abilityPoints;
-            this.BodyArmor = new LeatherVest();
-            this.Weapon = new Sword();
+            this.BodyArmor = DEFAULT_BODY_ARMOR;
+            this.Weapon = DEFAULT_WEAPON;
         }
 
         public void ShadowRage()
