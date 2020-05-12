@@ -24,5 +24,14 @@ namespace OOP2.Characters.Melees
                 }
             }
         }
+
+        public Melee(string name, int level, int abilityPoints)
+            : base(name, level)
+        {
+
+            this.Name = name;
+            this.Level = level;
+            this.AbilityPoints = abilityPoints;
+        }
     }
 }

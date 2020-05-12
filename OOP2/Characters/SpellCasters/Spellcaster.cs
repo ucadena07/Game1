@@ -24,5 +24,14 @@ namespace OOP2.Characters.SpellCasters
                 }
             }
         }
+
+        public Spellcaster(string name, int level, int abilityPoints)
+            : base(name, level)
+        {
+
+            this.Name = name;
+            this.Level = level;
+            this.ManaPoints = manaPoints;
+        }
     }
 }

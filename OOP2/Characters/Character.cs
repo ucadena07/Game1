@@ -8,7 +8,6 @@ namespace OOP2.Characters
         private string name;
         private Factions faction;
 
-        
         private int healthPoints;
         private int level;
 
@@ -33,7 +32,6 @@ namespace OOP2.Characters
                 }
             }
         }
-
         public int Level
         {
             get
@@ -85,6 +83,17 @@ namespace OOP2.Characters
                 this.faction = value;
 
             }
+        }
+
+        public Character()
+        {
+
+        }
+
+        public Character(string name, int level)
+        {
+            this.Name = name;
+            this.Level = level;
         }
     }
 }

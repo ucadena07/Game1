@@ -44,8 +44,7 @@ namespace OOP2
 
         public Warrior()
             : this(DEFAULT_NAME, DEFAULT_LEVEL)
-        {
-            
+        { 
         }
 
         public Warrior(string name, int level)
@@ -55,13 +54,10 @@ namespace OOP2
         }
 
         public Warrior(string name, int level, int abilityPoints)
+            : base(name, level, abilityPoints)
         {
-   
-            this.Name = name;
-            this.Level = level;
             this.HealthPoints = DEFAULT_HEALTH_POINTS;
             this.Faction = DEFAULT_FACTION;
-            this.AbilityPoints = abilityPoints;
             this.BodyArmor = DEFAULT_BODY_ARMOR;
             this.Weapon = DEFAULT_WEAPON;
         }

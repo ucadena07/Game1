@@ -5,9 +5,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        Assassin badguy = new Assassin();
+        Mage goodguy = new Mage();
+        Console.WriteLine(goodguy.Name);
 
-        Tools.ColorfulWriteLine(badguy.BodyArmor.ToString(), ConsoleColor.Red);
     }
 }
 
