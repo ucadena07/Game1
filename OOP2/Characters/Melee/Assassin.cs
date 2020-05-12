@@ -1,10 +1,12 @@
 ﻿using System;
+using OOP2.Characters.Enumerations;
+
 namespace OOP2
 {
     public class Assassin
     {
         private const string DEFAULT_NAME = "Assassin";
-        private const string DEFAULT_FACTION = "Melee";
+        private const Factions DEFAULT_FACTION = Factions.Melee;
 
         private const int DEFAULT_LEVEL = 1;
         private const int DEFAULT_ABILITY_POINTS = 10;
@@ -18,7 +20,7 @@ namespace OOP2
         private int level;
 
         private string name;
-        private string faction;
+        private Factions faction;
 
         private LeatherVest bodyArmor;
         private Sword weapon;
@@ -100,7 +102,7 @@ namespace OOP2
                 }
             }
         }
-        public string Faction
+        public Factions Faction
         {
             get
             {
@@ -108,15 +110,9 @@ namespace OOP2
             }
             set
             {
-                if (value == "Melee" || value == "Spellcaster")
-                {
-                    this.faction = value;
-                }
-                else
-                {
-                    this.faction = "Melee";
-                    Console.WriteLine("Inappropriate faction! should be \"Melee\" or \"Spellcaster\"");
-                }
+                
+                 this.faction = value;
+                
             }
         }
 
@@ -179,6 +175,17 @@ namespace OOP2
         public  void Survival()
         {
             throw new NotImplementedException();
+        }
+
+        public static void GetAllDefaultInformation()
+        {
+            Console.WriteLine($"Defaut name: {DEFAULT_NAME}" +
+                $"\nDefault faction: {DEFAULT_FACTION}" +
+                $"\nDefaul level: {DEFAULT_LEVEL}" +
+                $"\nDefault ability points: {DEFAULT_ABILITY_POINTS}" +
+                $"\nDefault health points: {DEFAULT_HEALTH_POINTS}"
+               
+                );
         }
     }
 }
