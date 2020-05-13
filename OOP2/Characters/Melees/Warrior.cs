@@ -1,4 +1,5 @@
 ﻿using System;
+using OOP2.Characters;
 using OOP2.Characters.Enumerations;
 using OOP2.Characters.Interfaces;
 using OOP2.Characters.Melees;
@@ -40,14 +41,14 @@ namespace OOP2
             base.Weapon = DEFAULT_WEAPON;
         }
 
-        public void Strike()
+        public int Strike()
         {
-            throw new NotImplementedException();
+            return base.Weapon.Damage + 10;
         }
 
-        public void Execute()
+        public int Execute()
         {
-            throw new NotImplementedException();
+            return this.Execute();
         }
 
         public void SkinHarden()
@@ -55,14 +56,14 @@ namespace OOP2
             throw new NotImplementedException();
         }
 
-        public override void Attack()
+        public override int Attack()
         {
-            this.Strike();
+            return this.Strike();
         }
 
-        public override void SpecialAttack()
+        public override int SpecialAttack()
         {
-            this.Execute();
+            return this.Execute();
         }
 
         public override void Defend()

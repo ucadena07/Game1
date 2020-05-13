@@ -11,11 +11,26 @@ namespace OOP2.Characters
         private string name;
         private Factions faction;
 
+        private bool isAlive;
+
         private int healthPoints;
         private int level;
+        private int score;
 
         private Armor bodyArmor;
         private Weapon weapon;
+
+        public bool IsAlive
+        {
+            get
+            {
+                return this.isAlive;
+            }
+            private set
+            {
+                this.isAlive = value;
+            }
+        }
 
         public Armor BodyArmor
         {
@@ -80,6 +95,17 @@ namespace OOP2.Characters
                 }
             }
         }
+        public int Score
+        {
+            get
+            {
+                return this.score;
+            }
+            private set
+            {
+                this.score = value;
+            }
+        }
 
 
         public string Name
@@ -124,13 +150,18 @@ namespace OOP2.Characters
             this.Level = level;
         }
 
-        public abstract void Attack();
+        public abstract int Attack();
 
 
-        public abstract void SpecialAttack();
+        public abstract int SpecialAttack();
 
 
         public abstract void Defend();
+
+        public void TakeDamage(int damage)
+        {
+            this.healthPoints = this.healthPoints - damage;
+        }
         
     }
 }

@@ -42,14 +42,14 @@ namespace OOP2
             base.Weapon = DEFAULT_WEAPON;
         }
 
-        public void ArcaneWrath()
+        public int ArcaneWrath()
         {
             throw new NotImplementedException();
         }
 
-        public override void Attack()
+        public override int Attack()
         {
-            this.ArcaneWrath();
+            return this.ArcaneWrath();
         }
 
         public override void Defend()
@@ -62,14 +62,14 @@ namespace OOP2
             throw new NotImplementedException();
         }
 
-        public void Meditation()
+        public int Meditation()
         {
             throw new NotImplementedException();
         }
 
-        public override void SpecialAttack()
+        public override int SpecialAttack()
         {
-            this.Meditation();
+            return this.Meditation();
         }
     }
 }
