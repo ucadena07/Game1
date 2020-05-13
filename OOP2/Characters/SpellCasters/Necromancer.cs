@@ -38,34 +38,34 @@ namespace OOP2
             base.Weapon = DEFAULT_WEAPON;
         }
 
-        public void ShadowRage()
+        public int ShadowRage()
         {
             throw new NotImplementedException();
         }
 
-        public void VampireTouch()
+        public int VampireTouch()
         {
             throw new NotImplementedException();
         }
 
-        public void BoneShield()
+        public int BoneShield()
         {
             throw new NotImplementedException();
         }
 
-        public override void Attack()
+        public override int Attack()
         {
-            this.ShadowRage();
+            return this.ShadowRage();
         }
 
-        public override void SpecialAttack()
+        public override int SpecialAttack()
         {
-            this.VampireTouch();
+            return this.VampireTouch();
         }
 
-        public override void Defend()
+        public override int Defend()
         {
-            this.BoneShield();
+            return this.BoneShield();
         }
     }
 }

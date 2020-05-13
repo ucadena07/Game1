@@ -26,7 +26,7 @@ namespace OOP2.Characters
             {
                 return this.isAlive;
             }
-            private set
+             set
             {
                 this.isAlive = value;
             }
@@ -101,7 +101,7 @@ namespace OOP2.Characters
             {
                 return this.score;
             }
-            private set
+             set
             {
                 this.score = value;
             }
@@ -175,13 +175,21 @@ namespace OOP2.Characters
             }
             if (!this.isAlive)
             {
-                Console.WriteLine($"{this.name} received {damage} from {attackerName}  damage, and is now dead" );
+                Console.WriteLine($"{this.name} received {damage} damage from {attackerName}, and is now dead" );
             }
             else
             {
-                Console.WriteLine($"{this.name} received {damage} from {attackerName}, and is now has {this.healthPoints}");
+                Console.WriteLine($"{this.name} received {damage} damage from {attackerName}, and is now has {this.healthPoints} healthpoints");
             }
         }
-        
+        public void WonBatle()
+        {
+            this.score++;
+
+            if (this.score % 10 == 0)
+            {
+                this.level++;
+            }
+        }
     }
 }

@@ -39,34 +39,34 @@ namespace OOP2
             base.Weapon = DEFAULT_WEAPON;
         }
 
-        public void MoonFire()
+        public int MoonFire()
         {
             throw new NotImplementedException();
         }
 
-        public void Starburst()
+        public int Starburst()
         {
             throw new NotImplementedException();
         }
 
-        public void OneWithTheNature()
+        public int OneWithTheNature()
         {
             throw new NotImplementedException();
         }
 
-        public override void Attack()
+        public override int Attack()
         {
-            this.MoonFire();
+            return this.MoonFire();
         }
 
-        public override void SpecialAttack()
+        public override int SpecialAttack()
         {
-            this.Starburst();
+            return this.Starburst();
         }
 
-        public override void Defend()
+        public override int Defend()
         {
-            this.OneWithTheNature();
+            return this.OneWithTheNature();
         }
     }
 }

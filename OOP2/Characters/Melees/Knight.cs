@@ -38,34 +38,34 @@ namespace OOP2
             base.Weapon = DEFAULT_WEAPON;
         }
 
-        public void HolyBlow()
+        public int HolyBlow()
         {
             throw new NotImplementedException();
         }
 
-        public void PurifySoul()
+        public int PurifySoul()
         {
             throw new NotImplementedException();
         }
 
-        public void RighteousWings()
+        public int RighteousWings()
         {
             throw new NotImplementedException();
         }
 
-        public override void Attack()
+        public override int Attack()
         {
-            this.HolyBlow();
+            return this.HolyBlow();
         }
 
-        public override void SpecialAttack()
+        public override int SpecialAttack()
         {
-            this.PurifySoul();
+            return this.PurifySoul();
         }
 
-        public override void Defend()
+        public override int Defend()
         {
-            this.RighteousWings();
+            return this.RighteousWings();
         }
     }
 }

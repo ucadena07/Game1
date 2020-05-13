@@ -39,33 +39,34 @@ namespace OOP2
             base.Weapon = DEFAULT_WEAPON;
         }
 
-        public void Raze()
+        public int Raze()
         {
             throw new NotImplementedException();
         }
 
-        public void Bleed()
+        public int Bleed()
         {
             throw new NotImplementedException();
         }
 
-        public void Survival()
+        public int Survival()
         {
             throw new NotImplementedException();
         }
 
-        public override void Attack()
+        public override int Attack()
         {
-            this.Raze();
+            return this.Raze();
         }
 
-        public override void SpecialAttack()
+        public override int SpecialAttack()
         {
-            this.Bleed();
+           return this.Bleed();
         }
 
-        public override void Defend()
+        public override int Defend()
         {
-            this.Survival();
+            return this.Survival();
+        }
     }
 }

@@ -9,6 +9,11 @@ class Program
 {
     static void Main(string[] args)
     {
+
+        Random rng = new Random();
+
+        int currentMelee = 0;
+        int currentSpellcaster = 0;
         bool gameOver = false;
 
         List<Character> characters = new List<Character>()
@@ -42,16 +47,49 @@ class Program
 
         while (!gameOver)
         {
-            //. 1 Take a random melee
-            // .2 Take a randoom spellcaster
+            currentMelee = rng.Next(0, meleeTeam.Count);
+            currentSpellcaster = rng.Next(0, spellTeam.Count);
+         
 
-            spellTeam[0].TakeDamage(meleeTeam[0].Attack(), meleeTeam[0].Name);
+            spellTeam[currentSpellcaster].TakeDamage(meleeTeam[currentMelee].Attack(), meleeTeam[currentMelee].Name);
 
-            // .3 Melee attacks spellcaster
-            // 3.1 Check if the character died and remove him from the team.
-            // 3.2 If dead, get another character from the team
+            if (!spellTeam[currentSpellcaster].IsAlive)
+            {
+                meleeTeam[currentMelee].WonBatle();
+                spellTeam.Remove(spellTeam[currentSpellcaster]);
 
-            meleeTeam[0].TakeDamage(spellTeam[0].Attack(), spellTeam[0].Name);
+                if (spellTeam.Count == 0)
+                {
+                    Console.WriteLine("Melee teams win");
+                    break;
+                }
+                else
+                {
+                    currentSpellcaster = rng.Next(0, spellTeam.Count);
+                }
+            }
+          
+           
+
+            meleeTeam[currentMelee].TakeDamage(spellTeam[currentSpellcaster].Attack(), spellTeam[currentSpellcaster].Name);
+
+            if (!meleeTeam[currentMelee].IsAlive)
+            {
+                spellTeam[currentSpellcaster].WonBatle();
+                meleeTeam.Remove(meleeTeam[currentMelee]);
+
+                if (meleeTeam.Count == 0)
+                {
+                    Console.WriteLine("Spellcaster teams win");
+                    break;
+                }
+                else
+                {
+                    currentMelee = rng.Next(0, meleeTeam.Count);
+                }
+
+
+            }
 
             // .4 Spellcaster attacks Melee
             // 4.1 Check if the character died and remove him from the team.

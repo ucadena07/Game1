@@ -40,6 +40,8 @@ namespace OOP2
             
             base.BodyArmor = DEFAULT_BODY_ARMOR;
             base.Weapon = DEFAULT_WEAPON;
+            base.IsAlive = true;
+            base.Score = 0;
         }
 
         public int ArcaneWrath()
