@@ -45,13 +45,13 @@ class Program
             //. 1 Take a random melee
             // .2 Take a randoom spellcaster
 
-            spellTeam[0].TakeDamage(meleeTeam[0].Attack());
+            spellTeam[0].TakeDamage(meleeTeam[0].Attack(), meleeTeam[0].Name);
 
             // .3 Melee attacks spellcaster
             // 3.1 Check if the character died and remove him from the team.
             // 3.2 If dead, get another character from the team
 
-            meleeTeam[0].TakeDamage(spellTeam[0].Attack());
+            meleeTeam[0].TakeDamage(spellTeam[0].Attack(), spellTeam[0].Name);
 
             // .4 Spellcaster attacks Melee
             // 4.1 Check if the character died and remove him from the team.

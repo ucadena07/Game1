@@ -49,27 +49,27 @@ namespace OOP2
 
         public override int Attack()
         {
-            return this.ArcaneWrath();
+            return this.Fireball();
         }
 
-        public override void Defend()
+        public override int Defend()
         {
-            this.FireWall();
+            return this.Meditation();
         }
 
-        public void FireWall()
+        public int Fireball()
         {
-            throw new NotImplementedException();
+            return base.Weapon.Damage + 10;
         }
 
         public int Meditation()
         {
-            throw new NotImplementedException();
+            return base.BodyArmor.ArmorPoints + 5;
         }
 
         public override int SpecialAttack()
         {
-            return this.Meditation();
+            return this.ArcaneWrath();
         }
     }
 }

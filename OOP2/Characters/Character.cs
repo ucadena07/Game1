@@ -156,11 +156,31 @@ namespace OOP2.Characters
         public abstract int SpecialAttack();
 
 
-        public abstract void Defend();
+        public abstract int Defend();
 
-        public void TakeDamage(int damage)
+        public void TakeDamage(int damage, string attackerName)
         {
-            this.healthPoints = this.healthPoints - damage;
+            if (this.Defend() < damage)
+            {
+                this.healthPoints = this.healthPoints - damage + this.Defend();
+
+                if (this.healthPoints <= 0)
+                {
+                    this.isAlive = false;
+                }
+            }
+            else
+            {
+                Console.WriteLine("hahahah WEAK");
+            }
+            if (!this.isAlive)
+            {
+                Console.WriteLine($"{this.name} received {damage} from {attackerName}  damage, and is now dead" );
+            }
+            else
+            {
+                Console.WriteLine($"{this.name} received {damage} from {attackerName}, and is now has {this.healthPoints}");
+            }
         }
         
     }
