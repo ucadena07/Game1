@@ -29,8 +29,8 @@ namespace OOP2.Characters.SpellCasters
             : base(name, level)
         {
 
-            this.Name = name;
-            this.Level = level;
+            base.Name = name;
+            base.Level = level;
             this.ManaPoints = manaPoints;
         }
     }

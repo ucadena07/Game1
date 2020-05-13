@@ -29,8 +29,8 @@ namespace OOP2.Characters.Melees
             : base(name, level)
         {
 
-            this.Name = name;
-            this.Level = level;
+            base.Name = name;
+            base.Level = level;
             this.AbilityPoints = abilityPoints;
         }
     }

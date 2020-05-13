@@ -8,7 +8,7 @@ namespace OOP2
        
         public Hammer()
         {
-            this.Damage = 10;
+            base.Damage = 10;
         }
 
         public void Stun()
