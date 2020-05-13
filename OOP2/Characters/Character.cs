@@ -1,9 +1,10 @@
 ﻿using System;
 using OOP2.Characters.Enumerations;
+using OOP2.Characters.Interfaces;
 
 namespace OOP2.Characters
 {
-    public class Character
+    public class Character : IAttack, IDefend
     {
         private string name;
         private Factions faction;
@@ -94,6 +95,21 @@ namespace OOP2.Characters
         {
             this.Name = name;
             this.Level = level;
+        }
+
+        public void Attack()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SpecialAttack()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Defend()
+        {
+            throw new NotImplementedException();
         }
     }
 }

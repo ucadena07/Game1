@@ -17,5 +17,6 @@
     <Folder Include="Weapons\Sharp\" />
     <Folder Include="Weapons\Blunt\" />
     <Folder Include="Characters\Enumerations\" />
+    <Folder Include="Characters\Interfaces\" />
   </ItemGroup>
 </Project>
