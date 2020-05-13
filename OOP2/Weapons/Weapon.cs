@@ -1,7 +1,7 @@
 ﻿using System;
 namespace OOP2.Weapons
 {
-    public class Weapon
+    public abstract class Weapon
     {
         private int damage;
 

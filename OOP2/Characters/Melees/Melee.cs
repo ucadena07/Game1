@@ -1,7 +1,7 @@
 ﻿using System;
 namespace OOP2.Characters.Melees
 {
-    public class Melee : Character
+    public abstract class Melee : Character
     {
         private int abilityPoints;
 

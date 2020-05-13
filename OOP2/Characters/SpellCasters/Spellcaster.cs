@@ -1,7 +1,7 @@
 ﻿using System;
 namespace OOP2.Characters.SpellCasters
 {
-    public class Spellcaster : Character
+    public abstract class Spellcaster : Character
     {
         private int manaPoints;
 

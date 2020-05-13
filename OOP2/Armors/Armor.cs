@@ -1,7 +1,7 @@
 ﻿using System;
 namespace OOP2.Armors
 {
-    public class Armor
+    public abstract class Armor
     {
         private int armorPoints;
 

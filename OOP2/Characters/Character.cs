@@ -4,7 +4,7 @@ using OOP2.Characters.Interfaces;
 
 namespace OOP2.Characters
 {
-    public class Character : IAttack, IDefend
+    public abstract class Character : IAttack, IDefend
     {
         private string name;
         private Factions faction;
