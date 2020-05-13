@@ -56,17 +56,17 @@ namespace OOP2
 
         public override void Attack()
         {
-            throw new NotImplementedException();
+            this.MoonFire();
         }
 
         public override void SpecialAttack()
         {
-            throw new NotImplementedException();
+            this.Starburst();
         }
 
         public override void Defend()
         {
-            throw new NotImplementedException();
+            this.OneWithTheNature();
         }
     }
 }

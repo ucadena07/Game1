@@ -55,17 +55,17 @@ namespace OOP2
 
         public override void Attack()
         {
-            throw new NotImplementedException();
+            this.ShadowRage();
         }
 
         public override void SpecialAttack()
         {
-            throw new NotImplementedException();
+            this.VampireTouch();
         }
 
         public override void Defend()
         {
-            throw new NotImplementedException();
+            this.BoneShield();
         }
     }
 }

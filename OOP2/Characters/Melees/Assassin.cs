@@ -49,24 +49,23 @@ namespace OOP2
             throw new NotImplementedException();
         }
 
-        public  void Survival()
+        public void Survival()
         {
             throw new NotImplementedException();
         }
 
         public override void Attack()
         {
-            throw new NotImplementedException();
+            this.Raze();
         }
 
         public override void SpecialAttack()
         {
-            throw new NotImplementedException();
+            this.Bleed();
         }
 
         public override void Defend()
         {
-            throw new NotImplementedException();
-        }
+            this.Survival();
     }
 }

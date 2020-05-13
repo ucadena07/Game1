@@ -2,30 +2,43 @@
 using System.Collections.Generic;
 using OOP2;
 using OOP2.Characters;
+using OOP2.Characters.Melees;
+using OOP2.Characters.SpellCasters;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Character warrior = new Warrior();
-        Character knight = new Knight();
-        Character assassin = new Assassin();
-        Character mage = new Mage();
-        Character necromancer = new Necromancer();
-        Character druid = new Druid();
+        List<Character> characters = new List<Character>()
+        {
+            new Warrior(),
+            new Warrior(),
+            new Warrior(),
+            //new Knight(),
+            //new Assassin(),
+            new Mage(),
+            new Mage(),
+            new Mage()
+            //new Druid(),
+            //new Necromancer()
+        };
 
-        List<Character> meleeTeam = new List<Character>();
-        List<Character> spellTeam = new List<Character>();
+        List<Melee> meleeTeam = new List<Melee>();
+        List<Spellcaster> spellTeam = new List<Spellcaster>();
 
-        meleeTeam.Add(warrior);
-        meleeTeam.Add(knight);
-        meleeTeam.Add(assassin);
+        foreach (var character in characters)
+        {
+            if (character is Melee)
+            {
+                meleeTeam.Add((Melee)character);
+            }
+            else if (character is Spellcaster)
+            {
+                spellTeam.Add((Spellcaster)character);
+            }
+        }
 
-        spellTeam.Add(mage);
-        spellTeam.Add(necromancer);
-        spellTeam.Add(druid);
-
-        warrior.Attack();
+       
     }
 }
 
