@@ -19,29 +19,7 @@ namespace OOP2
         private ClothRobe bodyArmor;
         private Staff weapon;
 
-        public ClothRobe BodyArmor
-        {
-            get
-            {
-                return bodyArmor;
-            }
-            set
-            {
-                bodyArmor = value;
-            }
-        }
-        public Staff Weapon
-        {
-            get
-            {
-                return weapon;
-            }
-            set
-            {
-                weapon = value;
-            }
-        }
-
+    
         public Mage()
             : this(DEFAULT_NAME, DEFAULT_LEVEL)
         {
@@ -60,11 +38,21 @@ namespace OOP2
             base.HealthPoints = DEFAULT_HEALTH_POINTS;
             base.Faction = DEFAULT_FACTION;
             
-            this.BodyArmor = DEFAULT_BODY_ARMOR;
-            this.Weapon = DEFAULT_WEAPON;
+            base.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.Weapon = DEFAULT_WEAPON;
         }
 
         public void ArcaneWrath()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Attack()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Defend()
         {
             throw new NotImplementedException();
         }
@@ -75,6 +63,11 @@ namespace OOP2
         }
 
         public void Meditation()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void SpecialAttack()
         {
             throw new NotImplementedException();
         }

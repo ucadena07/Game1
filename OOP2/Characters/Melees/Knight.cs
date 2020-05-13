@@ -16,32 +16,7 @@ namespace OOP2
         private readonly Hammer DEFAULT_WEAPON = new Hammer();
         private readonly Chainlink DEFAULT_BODY_ARMOR = new Chainlink();
 
-        private Chainlink bodyArmor;
-        private Hammer weapon;
-
-        public Chainlink BodyArmor
-        {
-            get
-            {
-                return this.bodyArmor;
-            }
-            set
-            {
-                this.bodyArmor = value;
-            }
-        }
-        public Hammer Weapon
-        {
-            get
-            {
-                return this.weapon;
-            }
-            set
-            {
-                this.weapon = value;
-            }
-        }
-
+   
         public Knight()
             : this(DEFAULT_NAME, DEFAULT_LEVEL)
         {
@@ -59,8 +34,8 @@ namespace OOP2
            
             base.HealthPoints = DEFAULT_HEALTH_POINTS;
             base.Faction = DEFAULT_FACTION;
-            this.BodyArmor = DEFAULT_BODY_ARMOR;
-            this.Weapon = DEFAULT_WEAPON;
+            base.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.Weapon = DEFAULT_WEAPON;
         }
 
         public void HolyBlow()
@@ -76,6 +51,21 @@ namespace OOP2
         public void RighteousWings()
         {
             throw new NotImplementedException();
+        }
+
+        public override void Attack()
+        {
+            this.HolyBlow();
+        }
+
+        public override void SpecialAttack()
+        {
+            this.PurifySoul();
+        }
+
+        public override void Defend()
+        {
+            this.RighteousWings();
         }
     }
 }

@@ -1,10 +1,11 @@
 ﻿using System;
 using OOP2.Characters.Enumerations;
+using OOP2.Characters.Interfaces;
 using OOP2.Characters.Melees;
 
 namespace OOP2
 {
-    public class Warrior : Melee
+    public class Warrior : Melee, IAttack, IDefend
     {
         private const string DEFAULT_NAME = "Warrior";
         private const Factions DEFAULT_FACTION = Factions.Melee;
@@ -16,31 +17,7 @@ namespace OOP2
         private readonly Axe DEFAULT_WEAPON = new Axe();
         private readonly Chainlink DEFAULT_BODY_ARMOR = new Chainlink();
 
-        private Chainlink bodyArmor;
-        private Axe weapon;
 
-        public Chainlink BodyArmor
-        {
-            get
-            {
-                return this.bodyArmor;
-            }
-            set
-            {
-                this.bodyArmor = value;
-            }
-        }
-        public Axe Weapon
-        {
-            get
-            {
-                return this.weapon;
-            }
-            set
-            {
-                this.weapon = value;
-            }
-        }
 
         public Warrior()
             : this(DEFAULT_NAME, DEFAULT_LEVEL)
@@ -59,8 +36,8 @@ namespace OOP2
             
             base.HealthPoints = DEFAULT_HEALTH_POINTS;
             base.Faction = DEFAULT_FACTION;
-            this.BodyArmor = DEFAULT_BODY_ARMOR;
-            this.Weapon = DEFAULT_WEAPON;
+            base.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.Weapon = DEFAULT_WEAPON;
         }
 
         public void Strike()
@@ -76,6 +53,21 @@ namespace OOP2
         public void SkinHarden()
         {
             throw new NotImplementedException();
+        }
+
+        public override void Attack()
+        {
+            this.Strike();
+        }
+
+        public override void SpecialAttack()
+        {
+            this.Execute();
+        }
+
+        public override void Defend()
+        {
+            this.SkinHarden();
         }
     }
 } 

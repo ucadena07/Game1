@@ -16,33 +16,6 @@ namespace OOP2
         private readonly Sword DEFAULT_WEAPON = new Sword();
         private readonly LeatherVest DEFAULT_BODY_ARMOR = new LeatherVest();
 
-        private LeatherVest bodyArmor;
-        private Sword weapon;
-
-        public LeatherVest BodyArmor
-        {
-            get
-            {
-                return this.bodyArmor;
-            }
-
-            set
-            {
-                this.bodyArmor = value;
-            }
-        }
-        public Sword Weapon
-        {
-            get
-            {
-                return this.weapon;
-            }
-            set
-            {
-                this.weapon = value;
-            }
-        }
-
         public Necromancer()
             : this(DEFAULT_NAME, DEFAULT_LEVEL)
         {
@@ -61,8 +34,8 @@ namespace OOP2
             base.HealthPoints = DEFAULT_HEALTH_POINTS;
             base.Faction = DEFAULT_FACTION;
            
-            this.BodyArmor = DEFAULT_BODY_ARMOR;
-            this.Weapon = DEFAULT_WEAPON;
+            base.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.Weapon = DEFAULT_WEAPON;
         }
 
         public void ShadowRage()
@@ -76,6 +49,21 @@ namespace OOP2
         }
 
         public void BoneShield()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Attack()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void SpecialAttack()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Defend()
         {
             throw new NotImplementedException();
         }

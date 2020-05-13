@@ -1,6 +1,8 @@
 ﻿using System;
+using OOP2.Armors;
 using OOP2.Characters.Enumerations;
 using OOP2.Characters.Interfaces;
+using OOP2.Weapons;
 
 namespace OOP2.Characters
 {
@@ -12,7 +14,32 @@ namespace OOP2.Characters
         private int healthPoints;
         private int level;
 
-       
+        private Armor bodyArmor;
+        private Weapon weapon;
+
+        public Armor BodyArmor
+        {
+            get
+            {
+                return this.bodyArmor;
+            }
+            set
+            {
+                this.bodyArmor = value;
+            }
+        }
+        public Weapon Weapon
+        {
+            get
+            {
+                return this.weapon;
+            }
+            set
+            {
+                this.weapon = value;
+            }
+        }
+
 
         public int HealthPoints
         {
@@ -97,19 +124,13 @@ namespace OOP2.Characters
             this.Level = level;
         }
 
-        public void Attack()
-        {
-            throw new NotImplementedException();
-        }
+        public abstract void Attack();
 
-        public void SpecialAttack()
-        {
-            throw new NotImplementedException();
-        }
 
-        public void Defend()
-        {
-            throw new NotImplementedException();
-        }
+        public abstract void SpecialAttack();
+
+
+        public abstract void Defend();
+        
     }
 }

@@ -17,33 +17,6 @@ namespace OOP2
         private readonly Sword DEFAULT_WEAPON = new Sword();
         private readonly LeatherVest DEFAULT_BODY_ARMOR = new LeatherVest();
 
-        private LeatherVest bodyArmor;
-        private Sword weapon;
-
-        public LeatherVest BodyArmor
-        {
-            get
-            {
-                return this.bodyArmor;
-            }
-            set
-            {
-                this.bodyArmor = value;
-            }
-        }
-
-        public Sword Weapon
-        {
-            get
-            {
-                return this.weapon;
-            }
-            set
-            {
-                this.weapon = value;
-            }
-        }
-
         public Assassin()
             : this(DEFAULT_NAME, DEFAULT_LEVEL)
         {
@@ -62,8 +35,8 @@ namespace OOP2
             base.HealthPoints = DEFAULT_HEALTH_POINTS;
             base.Faction = DEFAULT_FACTION;
 
-            this.BodyArmor = DEFAULT_BODY_ARMOR;
-            this.Weapon = DEFAULT_WEAPON;
+            base.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.Weapon = DEFAULT_WEAPON;
         }
 
         public void Raze()
@@ -81,15 +54,19 @@ namespace OOP2
             throw new NotImplementedException();
         }
 
-        public static void GetAllDefaultInformation()
+        public override void Attack()
         {
-            Console.WriteLine($"Defaut name: {DEFAULT_NAME}" +
-                $"\nDefault faction: {DEFAULT_FACTION}" +
-                $"\nDefaul level: {DEFAULT_LEVEL}" +
-                $"\nDefault ability points: {DEFAULT_ABILITY_POINTS}" +
-                $"\nDefault health points: {DEFAULT_HEALTH_POINTS}"
-               
-                );
+            throw new NotImplementedException();
+        }
+
+        public override void SpecialAttack()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Defend()
+        {
+            throw new NotImplementedException();
         }
     }
 }
